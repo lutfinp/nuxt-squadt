@@ -3,24 +3,21 @@ const { data } = await useFetch(
   "https://cdn-content.kompas.id/icm/sidebar/icm-sidebar.json"
 );
 
-const pick = reactive({
-  choosen: "post",
-});
+const choose = ref("post")
 
 const handleClick = (id) => {
-  pick.choosen = id;
+  choose.value = id
 };
 </script>
 
 <template>
   <div class="w-72 h-screen flex flex-col border border-r-gray-200">
     <div class="p-8">ICM</div>
-    <FontAwesomeIcon :icon="faHouse" />
     <div class="flex flex-col gap-5">
       <div v-for="value in data" :key="value.id">
         <NuxtLink @click="handleClick(value.id)" to="#">
           <div
-            v-if="value.id == pick.choosen"
+            v-if="value.id == choose"
             class="flex flex-row items-center gap-7"
           >
             <div class="h-5 w-1 bg-blue-600 rounded-e-sm"></div>
