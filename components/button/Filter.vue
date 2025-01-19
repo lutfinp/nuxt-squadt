@@ -1,10 +1,5 @@
 <script setup>
 const props = defineProps(["desk", "isActive"]);
-const status = ref(false);
-
-const handleClick = () => {
-  status.value = !status.value;
-};
 </script>
 
 <template>

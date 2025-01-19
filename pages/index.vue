@@ -3,638 +3,635 @@ const buttonMenu = ref(["All", "Published", "Scheduled", "Draft"]);
 
 const activeButtonMenu = ref("");
 
-const dataListDashboard = ref(
-  [
+const dataListDashboard = ref([
   {
-    "Key": "2485",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2485",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Deny Ramanda"
+      editor: {
+        raw: "Deny Ramanda",
       },
-      "categories": {
-        "raw": [
-          "{\"slug\":\"opini\",\"name\":\"Opini\"}",
-          "{\"name\":\"Artikel Opini\",\"slug\":\"artikel-opini\"}"
-        ]
+      categories: {
+        raw: [
+          '{"slug":"opini","name":"Opini"}',
+          '{"name":"Artikel Opini","slug":"artikel-opini"}',
+        ],
       },
-      "id": {
-        "raw": "2485"
+      id: {
+        raw: "2485",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2025-01-13T06:12:00.113Z"
+      modified_date: {
+        raw: "2025-01-13T06:12:00.113Z",
       },
-      "published_date": {
-        "raw": "2024-12-16T06:48:38.127Z"
+      published_date: {
+        raw: "2024-12-16T06:48:38.127Z",
       },
-      "status": {
-        "raw": "Published"
+      status: {
+        raw: "Published",
       },
-      "thumbnail": {
-        "raw": "https://asset.kgnewsroom.com/photo/pre/2024/12/16/836adc79-706d-4622-8af9-b0492f707a67_jpg.jpg"
+      thumbnail: {
+        raw: "https://asset.kgnewsroom.com/photo/pre/2024/12/16/836adc79-706d-4622-8af9-b0492f707a67_jpg.jpg",
       },
-      "title": {
-        "raw": "Deny Ramanda, regresi post article"
+      title: {
+        raw: "Deny Ramanda, regresi post article",
       },
-      "excerpt": {
-        "raw": "Ini adalah excerpt"
+      excerpt: {
+        raw: "Ini adalah excerpt",
       },
-      "penyelarasBahasa": {
-        "raw": {
-          "name": "",
-          "email": "",
-          "modifiedDate": {
-            "seconds": 1734331718,
-            "nanoseconds": 127000000
+      penyelarasBahasa: {
+        raw: {
+          name: "",
+          email: "",
+          modifiedDate: {
+            seconds: 1734331718,
+            nanoseconds: 127000000,
           },
-          "status": "requested",
-          "approvedDate": null
-        }
+          status: "requested",
+          approvedDate: null,
+        },
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": null
+      lockBy: {
+        raw: null,
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "post"
+      type: {
+        raw: "post",
       },
-      "review": {
-        "raw": null
-      }
-    }
+      review: {
+        raw: null,
+      },
+    },
   },
   {
-    "Key": "2222",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2222",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Firly Anugrah Firdaus"
+      editor: {
+        raw: "Firly Anugrah Firdaus",
       },
-      "categories": {
-        "raw": ["{\"slug\":\"nusantara\",\"name\":\"Nusantara\"}"]
+      categories: {
+        raw: ['{"slug":"nusantara","name":"Nusantara"}'],
       },
-      "id": {
-        "raw": "2222"
+      id: {
+        raw: "2222",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2025-01-12T16:10:52.097Z"
+      modified_date: {
+        raw: "2025-01-12T16:10:52.097Z",
       },
-      "published_date": {
-        "raw": "2024-11-25T07:43:03.971Z"
+      published_date: {
+        raw: "2024-11-25T07:43:03.971Z",
       },
-      "status": {
-        "raw": "Published"
+      status: {
+        raw: "Published",
       },
-      "thumbnail": {
-        "raw": "https://asset.kgnewsroom.com/photo/pre/2024/12/09/8a460b6b-7d77-40a7-80d0-1f66b9943d81_jpg.jpg"
+      thumbnail: {
+        raw: "https://asset.kgnewsroom.com/photo/pre/2024/12/09/8a460b6b-7d77-40a7-80d0-1f66b9943d81_jpg.jpg",
       },
-      "title": {
-        "raw": "ICM Paling lengkap"
+      title: {
+        raw: "ICM Paling lengkap",
       },
-      "excerpt": {
-        "raw": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+      excerpt: {
+        raw: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
       },
-      "penyelarasBahasa": {
-        "raw": {
-          "modifiedDate": {
-            "seconds": 1732520583,
-            "nanoseconds": 971000000
+      penyelarasBahasa: {
+        raw: {
+          modifiedDate: {
+            seconds: 1732520583,
+            nanoseconds: 971000000,
           },
-          "name": "",
-          "status": "requested",
-          "approvedDate": null,
-          "email": ""
-        }
+          name: "",
+          status: "requested",
+          approvedDate: null,
+          email: "",
+        },
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": "deny@kompas.com"
+      lockBy: {
+        raw: "deny@kompas.com",
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "post"
+      type: {
+        raw: "post",
       },
-      "review": {
-        "raw": {
-          "reviewerName": "",
-          "requesterName": "Firly Anugrah Firdaus",
-          "isReviewed": false,
-          "requesterEmail": "firly.firdaus@kompas.com",
-          "modifiedDate": {
-            "seconds": 1735339897,
-            "nanoseconds": 704000000
+      review: {
+        raw: {
+          reviewerName: "",
+          requesterName: "Firly Anugrah Firdaus",
+          isReviewed: false,
+          requesterEmail: "firly.firdaus@kompas.com",
+          modifiedDate: {
+            seconds: 1735339897,
+            nanoseconds: 704000000,
           },
-          "reviewerEmail": "",
-          "scores": {},
-          "reviewDate": null
-        }
-      }
-    }
+          reviewerEmail: "",
+          scores: {},
+          reviewDate: null,
+        },
+      },
+    },
   },
   {
-    "Key": "2255",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2255",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Deny Ramanda"
+      editor: {
+        raw: "Deny Ramanda",
       },
-      "categories": {
-        "raw": ["{\"slug\":\"polhuk\",\"name\":\"Politik & Hukum\"}"]
+      categories: {
+        raw: ['{"slug":"polhuk","name":"Politik & Hukum"}'],
       },
-      "id": {
-        "raw": "2255"
+      id: {
+        raw: "2255",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2025-01-07T07:10:31.268Z"
+      modified_date: {
+        raw: "2025-01-07T07:10:31.268Z",
       },
-      "published_date": {
-        "raw": "2024-12-02T09:45:43.432Z"
+      published_date: {
+        raw: "2024-12-02T09:45:43.432Z",
       },
-      "status": {
-        "raw": "Published"
+      status: {
+        raw: "Published",
       },
-      "thumbnail": {
-        "raw": "https://cdn-dam.kompas.id/images-dev/2024/11/29/36bbbe4b9adfc47bc9ad7250e76cc3e3-Miami_Dolphins_v_Green_Bay_Packers.jpg"
+      thumbnail: {
+        raw: "https://cdn-dam.kompas.id/images-dev/2024/11/29/36bbbe4b9adfc47bc9ad7250e76cc3e3-Miami_Dolphins_v_Green_Bay_Packers.jpg",
       },
-      "title": {
-        "raw": "Brief with number section 2"
+      title: {
+        raw: "Brief with number section 2",
       },
-      "excerpt": {
-        "raw": "number section brief"
+      excerpt: {
+        raw: "number section brief",
       },
-      "penyelarasBahasa": {
-        "raw": {
-          "email": "",
-          "name": "",
-          "approvedDate": null,
-          "modifiedDate": {
-            "seconds": 1733132743,
-            "nanoseconds": 432000000
+      penyelarasBahasa: {
+        raw: {
+          email: "",
+          name: "",
+          approvedDate: null,
+          modifiedDate: {
+            seconds: 1733132743,
+            nanoseconds: 432000000,
           },
-          "status": "requested"
-        }
+          status: "requested",
+        },
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": null
+      lockBy: {
+        raw: null,
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "brief"
+      type: {
+        raw: "brief",
       },
-      "review": {
-        "raw": null
-      }
-    }
+      review: {
+        raw: null,
+      },
+    },
   },
   {
-    "Key": "2529",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2529",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Deny Ramanda"
+      editor: {
+        raw: "Deny Ramanda",
       },
-      "categories": {
-        "raw": []
+      categories: {
+        raw: [],
       },
-      "id": {
-        "raw": "2529"
+      id: {
+        raw: "2529",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2024-12-27T10:08:00.361Z"
+      modified_date: {
+        raw: "2024-12-27T10:08:00.361Z",
       },
-      "published_date": {
-        "raw": null
+      published_date: {
+        raw: null,
       },
-      "status": {
-        "raw": "Draft"
+      status: {
+        raw: "Draft",
       },
-      "thumbnail": null,
-      "title": {
-        "raw": "Yddada"
+      thumbnail: null,
+      title: {
+        raw: "Yddada",
       },
-      "excerpt": {
-        "raw": ""
+      excerpt: {
+        raw: "",
       },
-      "penyelarasBahasa": {
-        "raw": null
+      penyelarasBahasa: {
+        raw: null,
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": null
+      lockBy: {
+        raw: null,
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "video"
+      type: {
+        raw: "video",
       },
-      "review": {
-        "raw": null
-      }
-    }
+      review: {
+        raw: null,
+      },
+    },
   },
   {
-    "Key": "2515",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2515",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Deny Ramanda"
+      editor: {
+        raw: "Deny Ramanda",
       },
-      "categories": {
-        "raw": []
+      categories: {
+        raw: [],
       },
-      "id": {
-        "raw": "2515"
+      id: {
+        raw: "2515",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2024-12-27T06:13:51.321Z"
+      modified_date: {
+        raw: "2024-12-27T06:13:51.321Z",
       },
-      "published_date": {
-        "raw": null
+      published_date: {
+        raw: null,
       },
-      "status": {
-        "raw": "Draft"
+      status: {
+        raw: "Draft",
       },
-      "thumbnail": null,
-      "title": {
-        "raw": "Dsds"
+      thumbnail: null,
+      title: {
+        raw: "Dsds",
       },
-      "excerpt": {
-        "raw": ""
+      excerpt: {
+        raw: "",
       },
-      "penyelarasBahasa": {
-        "raw": null
+      penyelarasBahasa: {
+        raw: null,
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": null
+      lockBy: {
+        raw: null,
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "post"
+      type: {
+        raw: "post",
       },
-      "review": {
-        "raw": null
-      }
-    }
+      review: {
+        raw: null,
+      },
+    },
   },
   {
-    "Key": "2506",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2506",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Deny Ramanda"
+      editor: {
+        raw: "Deny Ramanda",
       },
-      "categories": {
-        "raw": [
-          "{\"slug\":\"foto\",\"name\":\"Foto\"}",
-          "{\"slug\":\"foto-cerita\",\"name\":\"Foto Cerita\"}"
-        ]
+      categories: {
+        raw: [
+          '{"slug":"foto","name":"Foto"}',
+          '{"slug":"foto-cerita","name":"Foto Cerita"}',
+        ],
       },
-      "id": {
-        "raw": "2506"
+      id: {
+        raw: "2506",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2024-12-27T04:28:47.957Z"
+      modified_date: {
+        raw: "2024-12-27T04:28:47.957Z",
       },
-      "published_date": {
-        "raw": "2024-12-24T06:46:48.955Z"
+      published_date: {
+        raw: "2024-12-24T06:46:48.955Z",
       },
-      "status": {
-        "raw": "Published"
+      status: {
+        raw: "Published",
       },
-      "thumbnail": {
-        "raw": "https://cdn-dam.kompas.id/images-dev/2024/12/11/4a4be766584e82fdf605d09c12779ad0-cropped_image.png"
+      thumbnail: {
+        raw: "https://cdn-dam.kompas.id/images-dev/2024/12/11/4a4be766584e82fdf605d09c12779ad0-cropped_image.png",
       },
-      "title": {
-        "raw": "Foto Cerita hehe"
+      title: {
+        raw: "Foto Cerita hehe",
       },
-      "excerpt": {
-        "raw": "foto cerita hehe"
+      excerpt: {
+        raw: "foto cerita hehe",
       },
-      "penyelarasBahasa": {
-        "raw": {
-          "name": "",
-          "email": "",
-          "status": "requested",
-          "approvedDate": null,
-          "modifiedDate": {
-            "seconds": 1735022808,
-            "nanoseconds": 955000000
-          }
-        }
-      },
-      "isLocked": {
-        "raw": false
-      },
-      "lockBy": {
-        "raw": null
-      },
-      "chatCounter": {
-        "raw": 0
-      },
-      "type": {
-        "raw": "post"
-      },
-      "review": {
-        "raw": null
-      }
-    }
-  },
-  {
-    "Key": "2505",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
-      },
-      "editor": {
-        "raw": "Deny Ramanda"
-      },
-      "categories": {
-        "raw": [
-          "{\"slug\":\"humaniora\",\"name\":\"Humaniora\"}",
-          "{\"name\":\"Dikbud\",\"slug\":\"dikbud\"}"
-        ]
-      },
-      "id": {
-        "raw": "2505"
-      },
-      "live_editing": {
-        "raw": ""
-      },
-      "modified_date": {
-        "raw": "2024-12-23T13:22:58.717Z"
-      },
-      "published_date": {
-        "raw": "2024-12-23T13:25:00.000Z"
-      },
-      "status": {
-        "raw": "Published"
-      },
-      "thumbnail": {
-        "raw": "https://cdn-dam.kompas.id/images-dev/2024/12/11/4a4be766584e82fdf605d09c12779ad0-cropped_image.png"
-      },
-      "title": {
-        "raw": "Test Scheduling"
-      },
-      "excerpt": {
-        "raw": "Test"
-      },
-      "penyelarasBahasa": {
-        "raw": {
-          "approvedDate": null,
-          "email": "",
-          "modifiedDate": {
-            "seconds": 1734959950,
-            "nanoseconds": 597000000
+      penyelarasBahasa: {
+        raw: {
+          name: "",
+          email: "",
+          status: "requested",
+          approvedDate: null,
+          modifiedDate: {
+            seconds: 1735022808,
+            nanoseconds: 955000000,
           },
-          "status": "requested",
-          "name": ""
-        }
+        },
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": null
+      lockBy: {
+        raw: null,
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "post"
+      type: {
+        raw: "post",
       },
-      "review": {
-        "raw": null
-      }
-    }
+      review: {
+        raw: null,
+      },
+    },
   },
   {
-    "Key": "2500",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2505",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Deny Ramanda"
+      editor: {
+        raw: "Deny Ramanda",
       },
-      "categories": {
-        "raw": []
+      categories: {
+        raw: [
+          '{"slug":"humaniora","name":"Humaniora"}',
+          '{"name":"Dikbud","slug":"dikbud"}',
+        ],
       },
-      "id": {
-        "raw": "2500"
+      id: {
+        raw: "2505",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2024-12-20T10:13:03.340Z"
+      modified_date: {
+        raw: "2024-12-23T13:22:58.717Z",
       },
-      "published_date": {
-        "raw": null
+      published_date: {
+        raw: "2024-12-23T13:25:00.000Z",
       },
-      "status": {
-        "raw": "Draft"
+      status: {
+        raw: "Published",
       },
-      "thumbnail": null,
-      "title": {
-        "raw": "Test Idle Save"
+      thumbnail: {
+        raw: "https://cdn-dam.kompas.id/images-dev/2024/12/11/4a4be766584e82fdf605d09c12779ad0-cropped_image.png",
       },
-      "excerpt": {
-        "raw": ""
+      title: {
+        raw: "Test Scheduling",
       },
-      "penyelarasBahasa": {
-        "raw": null
+      excerpt: {
+        raw: "Test",
       },
-      "isLocked": {
-        "raw": false
-      },
-      "lockBy": {
-        "raw": null
-      },
-      "chatCounter": {
-        "raw": 0
-      },
-      "type": {
-        "raw": "post"
-      },
-      "review": {
-        "raw": null
-      }
-    }
-  },
-  {
-    "Key": "2231",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
-      },
-      "editor": {
-        "raw": "Deny Ramanda"
-      },
-      "categories": {
-        "raw": ["{\"slug\":\"polhuk\",\"name\":\"Politik & Hukum\"}"]
-      },
-      "id": {
-        "raw": "2231"
-      },
-      "live_editing": {
-        "raw": ""
-      },
-      "modified_date": {
-        "raw": "2024-12-20T08:05:38.215Z"
-      },
-      "published_date": {
-        "raw": "2024-11-26T08:28:47.103Z"
-      },
-      "status": {
-        "raw": "Published"
-      },
-      "thumbnail": {
-        "raw": "https://cdn-dam.kompas.id/images-dev/2024/11/18/be7b40745dbd67a3a842150b67214423-be7b40745dbd67a3a842150b67214423_20230922IDO_Kebakaran_Gambut17.jpeg"
-      },
-      "title": {
-        "raw": "Jawalll"
-      },
-      "excerpt": {
-        "raw": "jawall"
-      },
-      "penyelarasBahasa": {
-        "raw": {
-          "approvedDate": null,
-          "name": "",
-          "status": "requested",
-          "modifiedDate": {
-            "seconds": 1732609727,
-            "nanoseconds": 103000000
+      penyelarasBahasa: {
+        raw: {
+          approvedDate: null,
+          email: "",
+          modifiedDate: {
+            seconds: 1734959950,
+            nanoseconds: 597000000,
           },
-          "email": ""
-        }
+          status: "requested",
+          name: "",
+        },
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": null
+      lockBy: {
+        raw: null,
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "post"
+      type: {
+        raw: "post",
       },
-      "review": {
-        "raw": null
-      }
-    }
+      review: {
+        raw: null,
+      },
+    },
   },
   {
-    "Key": "2189",
-    "data": {
-      "author": {
-        "raw": ["Deny Ramanda"]
+    Key: "2500",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
       },
-      "editor": {
-        "raw": "Deny Ramanda"
+      editor: {
+        raw: "Deny Ramanda",
       },
-      "categories": {
-        "raw": []
+      categories: {
+        raw: [],
       },
-      "id": {
-        "raw": "2189"
+      id: {
+        raw: "2500",
       },
-      "live_editing": {
-        "raw": ""
+      live_editing: {
+        raw: "",
       },
-      "modified_date": {
-        "raw": "2024-12-19T06:40:03.542Z"
+      modified_date: {
+        raw: "2024-12-20T10:13:03.340Z",
       },
-      "published_date": {
-        "raw": null
+      published_date: {
+        raw: null,
       },
-      "status": {
-        "raw": "Draft"
+      status: {
+        raw: "Draft",
       },
-      "thumbnail": null,
-      "title": {
-        "raw": "New test article logs"
+      thumbnail: null,
+      title: {
+        raw: "Test Idle Save",
       },
-      "excerpt": {
-        "raw": ""
+      excerpt: {
+        raw: "",
       },
-      "penyelarasBahasa": {
-        "raw": null
+      penyelarasBahasa: {
+        raw: null,
       },
-      "isLocked": {
-        "raw": false
+      isLocked: {
+        raw: false,
       },
-      "lockBy": {
-        "raw": null
+      lockBy: {
+        raw: null,
       },
-      "chatCounter": {
-        "raw": 0
+      chatCounter: {
+        raw: 0,
       },
-      "type": {
-        "raw": "post"
+      type: {
+        raw: "post",
       },
-      "review": {
-        "raw": null
-      }
-    }
-  }
-]
-
-)
+      review: {
+        raw: null,
+      },
+    },
+  },
+  {
+    Key: "2231",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
+      },
+      editor: {
+        raw: "Deny Ramanda",
+      },
+      categories: {
+        raw: ['{"slug":"polhuk","name":"Politik & Hukum"}'],
+      },
+      id: {
+        raw: "2231",
+      },
+      live_editing: {
+        raw: "",
+      },
+      modified_date: {
+        raw: "2024-12-20T08:05:38.215Z",
+      },
+      published_date: {
+        raw: "2024-11-26T08:28:47.103Z",
+      },
+      status: {
+        raw: "Published",
+      },
+      thumbnail: {
+        raw: "https://cdn-dam.kompas.id/images-dev/2024/11/18/be7b40745dbd67a3a842150b67214423-be7b40745dbd67a3a842150b67214423_20230922IDO_Kebakaran_Gambut17.jpeg",
+      },
+      title: {
+        raw: "Jawalll",
+      },
+      excerpt: {
+        raw: "jawall",
+      },
+      penyelarasBahasa: {
+        raw: {
+          approvedDate: null,
+          name: "",
+          status: "requested",
+          modifiedDate: {
+            seconds: 1732609727,
+            nanoseconds: 103000000,
+          },
+          email: "",
+        },
+      },
+      isLocked: {
+        raw: false,
+      },
+      lockBy: {
+        raw: null,
+      },
+      chatCounter: {
+        raw: 0,
+      },
+      type: {
+        raw: "post",
+      },
+      review: {
+        raw: null,
+      },
+    },
+  },
+  {
+    Key: "2189",
+    data: {
+      author: {
+        raw: ["Deny Ramanda"],
+      },
+      editor: {
+        raw: "Deny Ramanda",
+      },
+      categories: {
+        raw: [],
+      },
+      id: {
+        raw: "2189",
+      },
+      live_editing: {
+        raw: "",
+      },
+      modified_date: {
+        raw: "2024-12-19T06:40:03.542Z",
+      },
+      published_date: {
+        raw: null,
+      },
+      status: {
+        raw: "Draft",
+      },
+      thumbnail: null,
+      title: {
+        raw: "New test article logs",
+      },
+      excerpt: {
+        raw: "",
+      },
+      penyelarasBahasa: {
+        raw: null,
+      },
+      isLocked: {
+        raw: false,
+      },
+      lockBy: {
+        raw: null,
+      },
+      chatCounter: {
+        raw: 0,
+      },
+      type: {
+        raw: "post",
+      },
+      review: {
+        raw: null,
+      },
+    },
+  },
+]);
 </script>
 
 <template>
@@ -653,7 +650,9 @@ const dataListDashboard = ref(
       </div>
       <ButtonAdd />
     </div>
-    <div class="grid grid-cols-9 p-4 text-left border-b border-gray-200">
+    <div
+      class="flex flex-row justify-between p-4 text-left border-b border-gray-200"
+    >
       <div>No</div>
       <div>Title</div>
       <div>Thumbnail</div>
@@ -664,8 +663,12 @@ const dataListDashboard = ref(
       <div>Review Status</div>
       <div>Date</div>
     </div>
-    <div v-for="dataArticle in dataListDashboard" :key="dataArticle.Key" class="grid grid-cols-9 p-4 text-left border-b border-gray-200 w-auto">
-      <div>1</div>
+    <div
+      v-for="(dataArticle, key) in dataListDashboard"
+      :key="key"
+      class="flex flex-row gap-4 p-4 text-left border-b border-gray-200 justify-between"
+    >
+      <div>{{ key+1 }}</div>
       <div>{{ dataArticle.data.title.raw }}</div>
     </div>
   </div>
