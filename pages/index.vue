@@ -1,7 +1,7 @@
 <script setup>
 const buttonMenu = ref(["All", "Published", "Scheduled", "Draft"]);
 
-const activeButtonMenu = ref("");
+const activeButtonMenu = ref("All");
 
 const dataListDashboard = ref([
   {
@@ -635,7 +635,7 @@ const dataListDashboard = ref([
 </script>
 
 <template>
-  <div class="py-9 px-16">
+  <div class="py-16 px-2">
     <div class="flex flex-col gap-5 border-b border-gray-200 w-full pb-5">
       <div class="flex flex-col gap-5 border-b border-gray-200 w-full pb-5">
         <div class="flex flex-row gap-3">
@@ -650,26 +650,63 @@ const dataListDashboard = ref([
       </div>
       <ButtonAdd />
     </div>
+    <div class="font-sans font-thin py-4 px-2 border-b border-gray-200">
+      10 artikel ditampilkan
+    </div>
     <div
-      class="flex flex-row justify-between p-4 text-left border-b border-gray-200"
+      class="flex flex-row justify-start py-4 px-2 gap-2 text-left border-b border-gray-200 font-sans font-semibold"
     >
-      <div>No</div>
-      <div>Title</div>
-      <div>Thumbnail</div>
-      <div>Last Edited By</div>
-      <div>Created By</div>
-      <div>Status</div>
-      <div>Category</div>
-      <div>Review Status</div>
-      <div>Date</div>
+      <div class="basis-[38px]">No</div>
+      <div class="basis-[200px] cursor-pointer">Title</div>
+      <div class="basis-[100px]">Thumbnail</div>
+      <div class="basis-[150px] cursor-pointer">Last Edited By</div>
+      <div class="basis-[150px]">Created By</div>
+      <div class="basis-[100px]">Status</div>
+      <div class="basis-[150px]">Categories</div>
+      <div class="basis-[170px]">Review Status</div>
+      <div class="basis-[100px]">Date</div>
     </div>
     <div
       v-for="(dataArticle, key) in dataListDashboard"
       :key="key"
-      class="flex flex-row gap-4 p-4 text-left border-b border-gray-200 justify-between"
+      class="flex flex-row gap-2 py-4 px-2 text-left border-b border-gray-200 justify-start font-sans items-center"
     >
-      <div>{{ key+1 }}</div>
-      <div>{{ dataArticle.data.title.raw }}</div>
+      <div class="basis-[38px] font-bold text-sm">{{ key + 1 }}</div>
+      <div
+        class="basis-[200px] font-semibold text-sm hover:text-blue-800 cursor-pointer"
+      >
+        {{ dataArticle.data.title.raw }}
+      </div>
+      <div class="basis-[100px] cursor-pointer">
+        <img
+          :src="dataArticle.data.thumbnail?.raw"
+          alt=""
+          class="w-[85px] h-[48px] rounded-md"
+        />
+      </div>
+      <div class="basis-[150px] font-semibold text-sm">
+        {{ dataArticle.data.editor.raw }}
+      </div>
+      <div class="basis-[150px] font-semibold text-sm">
+        {{ dataArticle.data.author.raw[0] }}
+      </div>
+      <div class="basis-[100px]">
+        <div class="bg-blue-200 p-2 rounded-md text-xs text-blue-800 font-bold">
+          {{ dataArticle.data.status.raw }}
+        </div>
+      </div>
+      <div class="basis-[150px] font-semibold text-xs">
+        {{ dataArticle.data.categories.raw[0] }}
+      </div>
+      <div class="basis-[110px]">
+        <div
+          v-if="dataArticle.data.review.raw"
+          class="bg-orange-200 p-2 rounded-md text-xs text-orange-800 font-bold"
+        >
+          Ready to Review
+        </div>
+        <div v-else class="font-bold">-</div>
+      </div>
     </div>
   </div>
 </template>

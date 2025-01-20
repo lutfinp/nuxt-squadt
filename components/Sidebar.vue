@@ -11,7 +11,7 @@ const handleClick = (id) => {
 </script>
 
 <template>
-  <div class="w-72 h-screen flex flex-col border border-r-gray-200">
+  <div class="w-72 h-min-screen flex flex-col border-r font-sans ">
     <img
       src="/img/logo.png"
       alt="logo-kompas"
@@ -29,17 +29,17 @@ const handleClick = (id) => {
           >
             <div
               :class="[
-                menuSidebar.id == choose ? 'h-5 w-1 bg-blue-600 rounded-e-sm' : '',
+                menuSidebar.id == choose ? 'h-5 w-[6px] bg-blue-800 rounded-e-md' : '',
               ]"
             ></div>
             <div
               :class="[
                 menuSidebar.id == choose
-                  ? 'bg-blue-200 text-blue-600 p-1 rounded-md w-full mr-7'
-                  : 'text-gray-700 ml-9',
+                  ? 'bg-blue-200 text-blue-800 p-1 rounded-md w-full mr-7 font-semibold'
+                  : 'text-gray-700 ml-9 font-light',
               ]"
             >
-              <div class="flex flex-row items-center gap-2">
+              <div class="flex flex-row items-center gap-4">
                 <img
                   :src="[
                     menuSidebar.id == choose

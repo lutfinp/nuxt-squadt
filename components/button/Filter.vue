@@ -5,7 +5,7 @@ const props = defineProps(["desk", "isActive"]);
 <template>
   <div>
     <button
-      class="border-2 p-2 text-xs rounded-full min-w-12"
+      class="border-2 px-4 font-sans py-2 text-xs font-bold rounded-full min-w-12"
       :class="[
         isActive
           ? 'bg-blue-100 border-blue-400 text-blue-800'
