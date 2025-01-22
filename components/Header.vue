@@ -3,7 +3,7 @@ const props = defineProps(["page", "profileName", "profileRole"]);
 </script>
 
 <template>
-  <div class="w-full">
+  <div class="w-full sticky top-0 bg-white font-serif">
     <div
       class="flex flex-row justify-between h-16 items-center px-4 py-8 border-b"
     >

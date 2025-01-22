@@ -1,5 +1,5 @@
 <script setup>
-const { data } = await useFetch(
+const { data:dataSidebar } = await useFetch(
   "https://cdn-content.kompas.id/icm/sidebar/icm-sidebar.json"
 );
 
@@ -11,14 +11,14 @@ const handleClick = (id) => {
 </script>
 
 <template>
-  <div class="w-72 h-min-screen flex flex-col border-r font-sans ">
+  <div class="w-72 h-min-screen flex flex-col border-r font-sans sticky">
     <img
       src="/img/logo.png"
       alt="logo-kompas"
       class="w-[32px] h-[32px] mx-10 my-8"
     />
     <div class="flex flex-col gap-5">
-      <div v-for="menuSidebar in data" :key="menuSidebar.id">
+      <div v-for="menuSidebar in dataSidebar" :key="menuSidebar.id">
         <NuxtLink @click="handleClick(menuSidebar.id)" to="#">
           <div
             :class="[
@@ -29,7 +29,9 @@ const handleClick = (id) => {
           >
             <div
               :class="[
-                menuSidebar.id == choose ? 'h-5 w-[6px] bg-blue-800 rounded-e-md' : '',
+                menuSidebar.id == choose
+                  ? 'h-5 w-[6px] bg-blue-800 rounded-e-md'
+                  : '',
               ]"
             ></div>
             <div
@@ -41,11 +43,7 @@ const handleClick = (id) => {
             >
               <div class="flex flex-row items-center gap-4">
                 <img
-                  :src="[
-                    menuSidebar.id == choose
-                      ? `https://cdn-content.kompas.id/icm/${menuSidebar.icon[1]}`
-                      : `https://cdn-content.kompas.id/icm/${menuSidebar.icon[0]}`,
-                  ]"
+                  :src="menuSidebar.id === choose ? `https://cdn-content.kompas.id/icm/${menuSidebar.icon[1]}` : `https://cdn-content.kompas.id/icm/${menuSidebar.icon[0]}`"
                   alt="icon"
                   class="w-[20px] h-[20px]"
                 />

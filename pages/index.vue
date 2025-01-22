@@ -654,7 +654,7 @@ const dataListDashboard = ref([
       10 artikel ditampilkan
     </div>
     <div
-      class="flex flex-row justify-start py-4 px-2 gap-2 text-left border-b border-gray-200 font-sans font-semibold"
+      class="flex flex-row justify-start py-4 px-2 gap-2 text-left border-b border-gray-200 font-[Lora] font-semibold"
     >
       <div class="basis-[38px]">No</div>
       <div class="basis-[200px] cursor-pointer">Title</div>
@@ -679,7 +679,11 @@ const dataListDashboard = ref([
       </div>
       <div class="basis-[100px] cursor-pointer">
         <img
-          :src="dataArticle.data.thumbnail?.raw"
+          :src="
+            dataArticle.data.thumbnail?.raw
+              ? dataArticle.data.thumbnail.raw
+              : '/img/thumbnail.png'
+          "
           alt=""
           class="w-[85px] h-[48px] rounded-md"
         />
@@ -695,13 +699,20 @@ const dataListDashboard = ref([
           {{ dataArticle.data.status.raw }}
         </div>
       </div>
-      <div class="basis-[150px] font-semibold text-xs">
-        {{ dataArticle.data.categories.raw[0] }}
+      <div class="flex flex-col basis-[150px] font-semibold text-xs">
+        <span
+          v-for="(category, index) in dataArticle.data.categories.raw.map(
+            (item) => JSON.parse(item)
+          )"
+          :key="index"
+        >
+          {{ category.name }}
+        </span>
       </div>
       <div class="basis-[110px]">
         <div
           v-if="dataArticle.data.review.raw"
-          class="bg-orange-200 p-2 rounded-md text-xs text-orange-800 font-bold"
+          class="bg-orange-100 p-2 rounded-md text-xs text-orange-600 font-bold"
         >
           Ready to Review
         </div>
