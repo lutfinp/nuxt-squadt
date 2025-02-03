@@ -20,9 +20,8 @@ const handleClick = (id) => {
   <div>
     <div
       :class="[
-        expand
-          ? 'w-72 h-screen flex flex-col border-r font-sans max-sm:hidden'
-          : 'w-42 h-screen flex flex-col border-r font-sans max-sm:hidden',
+        'h-screen flex flex-col border-r font-sans max-sm:hidden transition-all duration-1000',
+        expand ? 'w-72' : 'w-24',
       ]"
     >
       <img
@@ -112,10 +111,14 @@ const handleClick = (id) => {
         </div>
       </div>
       <div class="px-10 py-24">
-        <button class="flex flex-row gap-3 items-center" v-if="expand" @click="menuExpand">
+        <button
+          class="flex flex-row gap-3 items-center"
+          v-if="expand"
+          @click="menuExpand"
+        >
           <Icon
-          name="material-symbols:arrow-back-rounded"
-          class="w-[20px] h-[20px] text-gray-700"
+            name="material-symbols:arrow-back-rounded"
+            class="w-[20px] h-[20px] text-gray-700"
           />
           <div class="font-sans text-gray-700 text-base">Collapse</div>
         </button>

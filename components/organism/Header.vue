@@ -7,10 +7,13 @@ const burgerMenuSidebar = () => {
   activeBurgerMenu.value = !activeBurgerMenu.value;
 };
 
+const sidebarRef = ref(null);
+
+onClickOutside(sidebarRef, () => (activeBurgerMenu.value = false));
 </script>
 
 <template>
-  <div class="w-full sticky top-0 bg-white font-serif">
+  <div class="w-full top-0 bg-white font-serif">
     <div
       class="flex flex-row justify-between h-16 items-center px-4 py-8 border-b"
     >
@@ -37,8 +40,9 @@ const burgerMenuSidebar = () => {
         />
       </div>
     </div>
-    <div v-if="activeBurgerMenu">
-      <OrganismSidebarMobile />
+    <div v-if="activeBurgerMenu" class="w-screen h-screen fixed inset-0" >
+      <div class="w-full h-full absolute inset-0 z-0 bg-black/60"></div>
+      <OrganismSidebarMobile ref="sidebarRef" class="absolute z-10" />
     </div>
   </div>
 </template>

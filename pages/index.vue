@@ -7,6 +7,7 @@ const showOption = ref(false);
 
 const showOptionPosition = reactive({
   top: 0,
+  left: 0,
 });
 
 const dataListDashboard = ref([
@@ -651,6 +652,7 @@ const dateFormat = (dateString) => {
 const handleOptionClick = (event) => {
   const rect = event.target.getBoundingClientRect();
   showOptionPosition.top = rect.top + window.scrollY + rect.height;
+  showOptionPosition.left = rect.left + window.scrollY + rect.height;
   showOption.value = !showOption.value;
 };
 </script>
@@ -767,8 +769,9 @@ const handleOptionClick = (event) => {
           v-if="showOption"
           :style="{
             top: `${showOptionPosition.top}px`,
+            left: `${showOptionPosition.left}px`
           }"
-          class="bg-white shadow-md absolute right-32 flex flex-col font-sans font-bold text-xs gap-4 p-5"
+          class="w-fit bg-white shadow-md absolute right-32 flex flex-col font-sans font-bold text-xs gap-4 p-5 -translate-x-full"
         >
           <button class="flex flex-row gap-2 items-center">
             <img src="/img/stick.png" alt="" class="w-[10px] h-[10px]" />
