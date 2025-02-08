@@ -10,16 +10,20 @@ import Blockquote from "@tiptap/extension-blockquote";
 import Paragraph from "@tiptap/extension-paragraph";
 import Link from "@tiptap/extension-link";
 
+const props = defineProps(["placeholder", "varian"]);
+
 const editorTitle = ref(null);
 
 const editorNormal = ref(null);
+
+const editorExcerpt = ref(null);
 
 const isLinkInputActive = ref(false);
 const linkUrl = ref("");
 
 const isActiveChat = ref(false);
 
-const props = defineProps(["placeholder", "size", "alignment"]);
+const inputLinkRef = ref(null);
 
 const dropcapParagraph = Paragraph.extend({
   name: "paragraph",
@@ -58,6 +62,7 @@ const toggleLink = () => {
   const currentLink = editorNormal.value.getAttributes("link").href;
   if (currentLink) {
     editorNormal.value.chain().focus().unsetLink().run();
+    linkUrl.value = ""
   } else {
     isLinkInputActive.value = true;
   }
@@ -67,15 +72,12 @@ const setLink = () => {
   if (linkUrl.value) {
     editorNormal.value.chain().focus().setLink({ href: linkUrl.value }).run();
   }
-  isLinkInputActive.value = false;
 };
 
-const closeInput = () => {
-  isLinkInputActive.value = false;
-};
+onClickOutside(inputLinkRef, () => (isLinkInputActive.value = false));
 
 onMounted(() => {
-  if (props.size == "title") {
+  if (props.varian == "title") {
     editorTitle.value = new Editor({
       editorProps: {
         attributes: {
@@ -90,7 +92,7 @@ onMounted(() => {
         }),
       ],
     });
-  } else if (props.size == "normal") {
+  } else if (props.varian == "normal") {
     editorNormal.value = new Editor({
       editorProps: {
         attributes: {
@@ -125,6 +127,23 @@ onMounted(() => {
         dropcapParagraph,
       ],
     });
+  } else if (props.varian == "excerpt") {
+    {
+      editorExcerpt.value = new Editor({
+        editorProps: {
+          attributes: {
+            class: "outline-none",
+          },
+        },
+        content: "",
+        extensions: [
+          StarterKit,
+          Placeholder.configure({
+            placeholder: props.placeholder,
+          }),
+        ],
+      });
+    }
   }
 });
 
@@ -133,6 +152,8 @@ onBeforeUnmount(() => {
     editorTitle.value.destroy();
   } else if (editorNormal.value) {
     editorNormal.value.destroy();
+  } else if (editorExcerpt.value) {
+    editorExcerpt.value.destroy();
   }
 });
 </script>
@@ -147,13 +168,13 @@ onBeforeUnmount(() => {
       >
         <div
           v-if="isLinkInputActive"
-          class="text-red-600 bg-slate-600 w-fit h-fit text-sm flex flex-row items-center rounded-sm"
+          class="text-white bg-slate-600 w-fit h-fit text-sm flex flex-row items-center rounded-sm"
         >
           <input
             type="text"
             v-model="linkUrl"
             class="p-1 bg-slate-900 outline-none rounded-sm"
-            @blur="closeInput"
+            ref="inputLinkRef"
           />
           <button class="p-1 w-[25px] h-[25px]" @click="setLink">
             <Icon
@@ -261,13 +282,30 @@ onBeforeUnmount(() => {
           </button>
           <button
             class="p-1 w-[25px] h-[25px]"
-            @click="editorNormal.chain().focus().toggleBlockquote().run()"
+            @click="
+              if (editorNormal.isActive('blockquote')) {
+                editorNormal
+                  .chain()
+                  .focus()
+                  .toggleBlockquote()
+                  .setTextAlign('left')
+                  .run();
+              } else {
+                editorNormal
+                  .chain()
+                  .focus()
+                  .toggleBlockquote()
+                  .setTextAlign('center')
+                  .run();
+              }
+            "
             :class="{
-              'bg-gray-500 ': editorNormal.isActive('blockquote'),
+              'bg-gray-500': editorNormal.isActive('blockquote'),
             }"
           >
             <Icon name="mingcute:quote-left-fill" class="w-[15px] h-[15px]" />
           </button>
+
           <button
             class="p-1 w-[25px] h-[25px]"
             @click="toggleChat"
@@ -308,19 +346,25 @@ onBeforeUnmount(() => {
       <div class="mt-2">
         <editor-content
           :class="[
-            props.size == 'title'
+            props.varian == 'title'
               ? 'text-black font-serif font-bold items-center text-center justify-center text-[50px]'
-              : props.size == 'normal' && props.alignment == 'center'
+              : props.varian == 'excerpt'
               ? 'text-gray-400 font-sans items-center text-center justify-center text-[18px]'
               : 'text-black font-sans text-[18px]',
           ]"
-          :editor="props.size == 'title' ? editorTitle : editorNormal"
+          :editor="
+            props.varian == 'title'
+              ? editorTitle
+              : props.varian == 'normal'
+              ? editorNormal
+              : editorExcerpt
+          "
         />
       </div>
     </div>
     <div
       v-if="isActiveChat"
-      class="w-[320px] h-screen fixed inset-0 ml-[1214px] bg-white shadow-md"
+      class="w-[320px] h-screen fixed inset-y-0 right-0 bg-white shadow-md"
     >
       <AtomChat />
     </div>
@@ -388,6 +432,6 @@ onBeforeUnmount(() => {
 }
 
 .tiptap a {
-  color: blue;
+  color: rgb(86, 86, 222);
 }
 </style>
